@@ -1,0 +1,119 @@
+/*
+**
+** FONTS
+**
+*/
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Regular.ttf);
+}
+
+/*
+**
+** RAIZ DO DOCUMENTO
+**
+*/
+:root {
+    --distance: 3px;
+}
+
+/*
+**
+** RESET
+**
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    color: #7e7e8b;
+    font-family: Roboto;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+}
+
+h1 {
+    font-weight: normal;
+    margin: 0;
+}
+
+/*
+**
+** TIC TAC TOE
+**
+*/
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 0.5rem;
+
+}
+
+.current-player {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0.5rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--distance);
+
+    background-color: #dcdce0;
+    height: 300px;
+    width: 300px;
+}
+
+.board .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.actions button {
+    background-color: transparent;
+    border: 1px solid #4f76c4;
+    border-radius: 0.25rem;
+    color: #4f76c4;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: all 150ms ease-in-out;
+}
+
+.actions button:hover {
+    background-color: #4f76c4;
+    color: #fff;
+}
